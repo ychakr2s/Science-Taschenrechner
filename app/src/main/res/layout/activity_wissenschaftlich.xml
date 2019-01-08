@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtViewResult"
+        android:background="@color/backgroundCalculator"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="left"
+        android:paddingLeft="10dp"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="30pt" />
+
+    <TextView
+        android:id="@+id/txtViewEntry"
+        android:layout_width="match_parent"
+        android:layout_height="30pt"
+        android:layout_weight="1"
+        android:background="@color/backgroundCalculator"
+        android:gravity="right"
+        android:paddingTop="60dp"
+        android:paddingRight="10dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <Button
+                android:id="@+id/btnTang"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/tang"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:onClick="btOpfunc"
+                android:textStyle="normal"
+                />
+
+            <Button
+                android:id="@+id/btnInvSin"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/sininver"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:onClick="btOpfunc"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnSin"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/sin"
+                android:textColor="@color/black"
+                android:onClick="btOpfunc"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnInvCos"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/invecos"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:onClick="btOpfunc"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnCos"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                android:background="@drawable/cosin"
+                android:onClick="btOpfunc"
+                android:textSize="18sp" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <Button
+                android:id="@+id/btnInvTang"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/invertang"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:onClick="btOpfunc"
+                android:textStyle="italic"
+                />
+
+            <Button
+                android:id="@+id/btnEp"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/exnum"
+                android:textSize="18sp"
+                android:onClick="btOpfunc"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnExpn"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/exp"
+                android:textSize="18sp"
+                android:onClick="btOpfunc"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnLog"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/log"
+                android:textSize="18sp"
+                android:onClick="btOpfunc"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnLn"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                android:background="@drawable/ln"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:onClick="btOpfunc"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <Button
+                android:id="@+id/btnThX"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/tenx"
+                android:onClick="btOpfunc"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                />
+
+            <Button
+                android:id="@+id/btnNegPos"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@color/operation"
+                android:text="+/-"
+                android:onClick="btOpfunc"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                android:layout_marginRight="1pt"
+                android:background="@color/operation"
+                android:text="/"
+                android:onClick="btOpEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/deletback"
+                android:onClick="btOpDelete"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+            <Button
+                android:id="@+id/btnAc"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                android:background="@color/operation"
+                android:text="AC"
+                android:onClick="btnClear"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <Button
+                android:id="@+id/btnXhY"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/xhochy"
+                android:onClick="btOpfunc"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="7"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="8"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="9"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnMult"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                android:background="@color/operation"
+                android:text="*"
+                android:onClick="btOpEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+            <Button
+                android:id="@+id/btnNfact"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/nfact"
+                android:onClick="btOpfunc"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="4"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="5"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="6"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnMin"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                android:background="@color/operation"
+                android:text="-"
+                android:onClick="btOpEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <Button
+                android:id="@+id/btnRoot"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/root"
+                android:textSize="18sp"
+                android:onClick="btOpfunc"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="1"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="2"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="3"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnPl"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                android:background="@color/operation"
+                android:text="+"
+                android:onClick="btOpEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <Button
+                android:id="@+id/btnPi"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/pi"
+                android:onClick="btOpfunc"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="0"
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btncom"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:text="."
+                android:onClick="btNumEvent"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+            <Button
+                android:id="@+id/btnMod"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_marginRight="1pt"
+                android:layout_weight="1"
+                android:background="@drawable/mod"
+                android:textSize="18sp"
+                android:onClick="btOpEvent"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/btnEqual"
+                android:layout_width="30pt"
+                android:layout_height="20pt"
+                android:layout_weight="1"
+                android:background="@color/operation"
+                android:text="="
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:onClick="btOpEqu"
+                android:textStyle="normal" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
